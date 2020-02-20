@@ -2,9 +2,6 @@ import com.code.LeetCode;
 import com.code.template.Manual;
 import org.junit.Test;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class JunitTest {
 
     @Test
@@ -34,7 +31,6 @@ public class JunitTest {
 
     public void sout(String string){
         LeetCode t = new Manual();
-        List<String> strings = t.letterCombinations(string);
-        System.out.println(strings.stream().collect(Collectors.joining(" ")));
+        t.leetCode(string);
     }
 }
