@@ -4,6 +4,7 @@ import com.bean.Node;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class LeetCode {
     //用于临时存储路径
@@ -12,7 +13,11 @@ public abstract class LeetCode {
 
     //生成根节点
     private Node root = new Node("");
-
+    
+    public void leetCode(String digits) {
+        List<String> strings = letterCombinations(digits);
+        System.out.println(strings.stream().collect(Collectors.joining(" ")));
+    }
     /**
      * 遍历树
      *
